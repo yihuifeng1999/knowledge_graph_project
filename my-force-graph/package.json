@@ -40,5 +40,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://yihuifeng1999.github.io/knowledge_graph_project"
+  "homepage": "https://yihuifeng1999.github.io/knowledge_graph_project",
+  "devDependencies": {
+    "tailwindcss": "^3.4.13"
+  }
 }

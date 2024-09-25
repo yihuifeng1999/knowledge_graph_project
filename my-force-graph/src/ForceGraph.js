@@ -3,6 +3,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import ForceGraph3D from 'react-force-graph-3d';
 import * as THREE from 'three';
 import SpriteText from 'three-spritetext';
+import graph_Data_json from './graph_data.json'; // Assuming it's in src folder
 
 // Sample initial graph data
 const initialData = {
@@ -41,7 +42,7 @@ const initialData = {
 
 const ForceGraph = () => {
     const fgRef = useRef();
-    const [graphData, setGraphData] = useState(initialData);
+    const [graphData, setGraphData] = useState(graph_Data_json);
     const [graphHistory, setGraphHistory] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
 
@@ -70,32 +71,32 @@ const ForceGraph = () => {
         if (matchedNode) {
             // Save the current state to history
             setGraphHistory((prevHistory) => [...prevHistory, graphData]);
-        
+
             // Find directly connected nodes
             const connectedNodeIds = new Set();
             connectedNodeIds.add(matchedNode.id);
-        
+
             graphData.links.forEach((link) => {
-              if (link.source.id === matchedNode.id) {
-                connectedNodeIds.add(link.target.id);
-              } else if (link.target.id === matchedNode.id) {
-                connectedNodeIds.add(link.source.id);
-              }
+                if (link.source.id === matchedNode.id) {
+                    connectedNodeIds.add(link.target.id);
+                } else if (link.target.id === matchedNode.id) {
+                    connectedNodeIds.add(link.source.id);
+                }
             });
-        
+
             // Filter nodes and links
             const newNodes = graphData.nodes.filter((node) =>
-              connectedNodeIds.has(node.id)
+                connectedNodeIds.has(node.id)
             );
             const newLinks = graphData.links.filter(
-              (link) =>
-                connectedNodeIds.has(link.source.id) &&
-                connectedNodeIds.has(link.target.id)
+                (link) =>
+                    connectedNodeIds.has(link.source.id) &&
+                    connectedNodeIds.has(link.target.id)
             );
-        
+
             const newGraphData = { nodes: newNodes, links: newLinks };
             setGraphData(newGraphData);
-        
+
             // Center the camera on the matched node
             // if (fgRef.current) {
             //   fgRef.current.centerAt(
@@ -105,9 +106,9 @@ const ForceGraph = () => {
             //   );
             //   fgRef.current.zoom(8, 1000);
             // }
-          } else {
+        } else {
             alert('Node not found.');
-          }
+        }
     }
     const handleBack = () => {
         if (graphHistory.length > 0) {
@@ -147,24 +148,29 @@ const ForceGraph = () => {
     }
 
     return (
-        <div>
-            <div style={{ position: 'absolute', top: '10px', left: '80px', zIndex: 1 }}>
-                <input
-                    type="text"
-                    placeholder="Search node..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    onKeyDown={(e) => {
-                        if (e.key === 'Enter') {
-                            handleSearch();
-                        }
-                    }}
-                />
-                <button onClick={handleSearch}>Search</button>
+        <div className="relative h-screen">
+            <div className="absolute top-10 left-10 z-10">
+                <div className="flex-initial items-center space-x-2">
+                    <input
+                        className="px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        type="text"
+                        placeholder="Search node..."
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter') {
+                                handleSearch();
+                            }
+                        }}
+                    />
+                </div>
+                <button onClick={handleSearch}
+                    className="flex-initial bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 focus:outline-none">Search</button>
+
+                <button className=" flex-initial bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none" onClick={handleBack}>
+                    Back
+                </button>
             </div>
-            <button onClick={handleBack}>
-                Back
-            </button>
             <ForceGraph3D
                 ref={fgRef}
                 graphData={graphData}
