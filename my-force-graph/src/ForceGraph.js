@@ -43,6 +43,7 @@ const ForceGraph = () => {
     const fgRef = useRef();
     const [graphData, setGraphData] = useState(initialData);
     const [graphHistory, setGraphHistory] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
 
     // Function to generate new graph data when a node is clicked
     const generateNewGraphData = (node) => {
@@ -62,18 +63,106 @@ const ForceGraph = () => {
         return { nodes: newNodes, links: newLinks };
     };
 
+    const handleSearch = () => {
+        const matchedNode = graphData.nodes.find(
+            (node) => node.id.toLowerCase() === searchTerm.toLowerCase()
+        );
+        if (matchedNode) {
+            // Save the current state to history
+            setGraphHistory((prevHistory) => [...prevHistory, graphData]);
+        
+            // Find directly connected nodes
+            const connectedNodeIds = new Set();
+            connectedNodeIds.add(matchedNode.id);
+        
+            graphData.links.forEach((link) => {
+              if (link.source.id === matchedNode.id) {
+                connectedNodeIds.add(link.target.id);
+              } else if (link.target.id === matchedNode.id) {
+                connectedNodeIds.add(link.source.id);
+              }
+            });
+        
+            // Filter nodes and links
+            const newNodes = graphData.nodes.filter((node) =>
+              connectedNodeIds.has(node.id)
+            );
+            const newLinks = graphData.links.filter(
+              (link) =>
+                connectedNodeIds.has(link.source.id) &&
+                connectedNodeIds.has(link.target.id)
+            );
+        
+            const newGraphData = { nodes: newNodes, links: newLinks };
+            setGraphData(newGraphData);
+        
+            // Center the camera on the matched node
+            // if (fgRef.current) {
+            //   fgRef.current.centerAt(
+            //     matchedNode.x || 0,
+            //     matchedNode.y || 0,
+            //     1000 // Transition duration in ms
+            //   );
+            //   fgRef.current.zoom(8, 1000);
+            // }
+          } else {
+            alert('Node not found.');
+          }
+    }
+    const handleBack = () => {
+        if (graphHistory.length > 0) {
+            // Get the last graph state from history
+            const previousGraphData = graphHistory[graphHistory.length - 1];
+            // Remove the last state from history
+            setGraphHistory((prevHistory) => prevHistory.slice(0, -1));
+            // Update the graph data
+            setGraphData(previousGraphData);
+        } else {
+            // If no history, reset to initial data
+            setGraphData(initialData);
+        }
+    }
+    const hadnleNodeOnClick = (node) => {
+        // Save the current state to history  
+        setGraphHistory((prevHistory) => [...prevHistory, graphData]);
+        const newGraphData = generateNewGraphData(node);
+        setGraphData(newGraphData);
+
+        // Optionally, center the camera on the clicked node
+        if (fgRef.current) {
+            const distance = 200;
+            const distRatio =
+                1 + distance / Math.hypot(node.x || 1, node.y || 1, node.z || 1);
+
+            fgRef.current.cameraPosition(
+                {
+                    x: (node.x || 0) * distRatio,
+                    y: (node.y || 0) * distRatio,
+                    z: (node.z || 0) * distRatio,
+                },
+                node, // Look at the clicked node
+                3000  // Transition duration in ms
+            );
+        }
+    }
+
     return (
         <div>
-            <button onClick={() => {
-                if (graphHistory.length > 0) {
-                    // Get the last graph state from history
-                    const previousGraphData = graphHistory[graphHistory.length - 1];
-                    // Remove the last state from history
-                    setGraphHistory((prevHistory) => prevHistory.slice(0, -1));
-                    // Update the graph data
-                    setGraphData(previousGraphData);
-                }
-            }}>
+            <div style={{ position: 'absolute', top: '10px', left: '80px', zIndex: 1 }}>
+                <input
+                    type="text"
+                    placeholder="Search node..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                            handleSearch();
+                        }
+                    }}
+                />
+                <button onClick={handleSearch}>Search</button>
+            </div>
+            <button onClick={handleBack}>
                 Back
             </button>
             <ForceGraph3D
@@ -86,33 +175,12 @@ const ForceGraph = () => {
                 nodeThreeObject={(node) => {
                     // Display text instead of spheres
                     const sprite = new SpriteText(node.id);
+                    sprite.material.depthWrite = false;
                     sprite.color = node.color;
                     sprite.textHeight = 8;
                     return sprite;
                 }}
-                onNodeClick={(node) => {
-                    // Save the current state to history  
-                    setGraphHistory((prevHistory) => [...prevHistory, graphData]);
-                    const newGraphData = generateNewGraphData(node);
-                    setGraphData(newGraphData);
-
-                    // Optionally, center the camera on the clicked node
-                    if (fgRef.current) {
-                        const distance = 200;
-                        const distRatio =
-                            1 + distance / Math.hypot(node.x || 1, node.y || 1, node.z || 1);
-
-                        fgRef.current.cameraPosition(
-                            {
-                                x: (node.x || 0) * distRatio,
-                                y: (node.y || 0) * distRatio,
-                                z: (node.z || 0) * distRatio,
-                            },
-                            node, // Look at the clicked node
-                            3000  // Transition duration in ms
-                        );
-                    }
-                }}
+                onNodeClick={hadnleNodeOnClick}
             />
         </div>
     );
