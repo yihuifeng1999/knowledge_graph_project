@@ -4,6 +4,12 @@ import ForceGraph3D from 'react-force-graph-3d';
 import * as THREE from 'three';
 import SpriteText from 'three-spritetext';
 import graph_Data_json from './graph_data.json'; // Assuming it's in src folder
+import learning_json from './Learning.json'; // Assuming it's in src folder
+import technical_development_json from './Technical_development.json'; // Assuming it's in src folder
+import a_cloud_guru_json from './A_cloud_guru.json'; // Assuming it's in src folder
+import relativity_one_json from './Relativity_one.json'; // Assuming it's in src folder
+import expert_json from './expert.json'; // Assuming it's in src folder
+
 
 // Sample initial graph data
 const initialData = {
@@ -67,9 +73,14 @@ const ForceGraph = () => {
     };
 
     const handleSearch = () => {
-        const matchedNode = graphData.nodes.find(
+        let matchedNode = graphData.nodes.find(
             (node) => node.id.toLowerCase() === searchTerm.toLowerCase()
         );
+        if(searchTerm === "Email Review"){
+            matchedNode = graphData.nodes.find(
+                (node) => node.id.toLowerCase() === "Relativity One".toLowerCase()
+            );
+        }
         if (matchedNode) {
             // Save the current state to history
             setGraphHistory((prevHistory) => [...prevHistory, graphData]);
@@ -98,6 +109,7 @@ const ForceGraph = () => {
 
             const newGraphData = { nodes: newNodes, links: newLinks };
             setGraphData(newGraphData);
+            setSelectedNode(matchedNode);
 
             // Center the camera on the matched node
             if (fgRef.current) {
@@ -135,8 +147,23 @@ const ForceGraph = () => {
         // Save the current state to history  
         setGraphHistory((prevHistory) => [...prevHistory, graphData]);
         if (selectedNode == node) {
-            const newGraphData = generateNewGraphData(node);
+            
+            if(node.id == "Learning"){
+                setGraphData(learning_json);
+            }else if(node.id == "Technical Development"){
+                setGraphData(technical_development_json);
+            }else if(node.id == "A Cloud Guru"){
+                setGraphData(a_cloud_guru_json);
+            }else if(node.id == "Relativity One"){
+                setGraphData(relativity_one_json);
+            }else if(node.id == "Expert"){
+                setGraphData(expert_json);
+            }
+            else{
+                const newGraphData = generateNewGraphData(node);
             setGraphData(newGraphData);
+            }
+            
         } else {
             // Set the selected node
             setSelectedNode(node);
@@ -162,7 +189,7 @@ const ForceGraph = () => {
             setTimeout(() => {
                 const coords = { x: window.innerWidth * 2 / 3 + 100, y: window.innerHeight * 2 / 5, z: 100 };
                 setPanelPosition(coords);
-            }, 1000); // Match the camera transition duration
+            }, 1500); // Match the camera transition duration
         }
     }
 

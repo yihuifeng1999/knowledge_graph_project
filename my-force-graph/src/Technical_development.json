@@ -1,0 +1,121 @@
+{
+
+    "nodes": [
+
+        {
+
+            "id": "Technical Development",
+
+            "name": "Technical Development",
+
+            "val": 6
+
+        },
+
+        {
+
+            "id": "Degreed",
+
+            "name": "Degreed",
+
+            "val": 6
+
+        },
+
+        {
+
+            "id": "LinkedIn Learning",
+
+            "name": "LinkedIn Learning",
+
+            "val": 6
+
+        },
+
+        {
+
+            "id": "DataCamp",
+
+            "name": "DataCamp",
+
+            "val": 6
+
+        },
+
+        {
+
+            "id": "Pluralsight",
+
+            "name": "Pluralsight",
+
+            "val": 6
+
+        },
+
+        {
+
+            "id": "A Cloud Guru",
+
+            "name": "A Cloud Guru",
+
+            "val": 6
+
+        }
+
+    ],
+
+    "links": [
+
+        {
+
+            "source": "Technical Development",
+
+            "target": "Degreed",
+
+            "relationship": "includes"
+
+        },
+
+        {
+
+            "source": "Technical Development",
+
+            "target": "LinkedIn Learning",
+
+            "relationship": "includes"
+
+        },
+
+        {
+
+            "source": "Technical Development",
+
+            "target": "DataCamp",
+
+            "relationship": "includes"
+
+        },
+
+        {
+
+            "source": "Technical Development",
+
+            "target": "Pluralsight",
+
+            "relationship": "includes"
+
+        },
+
+        {
+
+            "source": "Technical Development",
+
+            "target": "A Cloud Guru",
+
+            "relationship": "includes"
+
+        }
+
+    ]
+
+}

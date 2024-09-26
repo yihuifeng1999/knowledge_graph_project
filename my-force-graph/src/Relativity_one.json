@@ -1,0 +1,119 @@
+{
+
+    "nodes": [
+
+        {
+
+            "id": "Access info",
+
+            "name": "Access info",
+
+            "val": 6
+
+        },
+
+        {
+
+            "id": "Contract",
+
+            "name": "Contract",
+
+            "val": 6
+
+        },
+
+        {
+
+            "id": "Experts",
+
+            "name": "Experts",
+
+            "val": 6
+
+        },
+        {
+
+            "id": "Training",
+
+            "name": "Training",
+
+            "val": 6
+
+        },
+        {
+
+            "id": "Relativity One",
+
+            "name": "Relativity One",
+
+            "val": 6
+
+        },
+
+
+
+        {
+
+            "id": "Champions",
+
+            "name": "Champions",
+
+            "val": 6
+
+        }
+
+    ],
+
+    "links": [
+
+        {
+
+            "source": "Access info",
+
+            "target": "Relativity One",
+
+            "relationship": "includes"
+
+        },
+
+        {
+
+            "source": "Relativity One",
+
+            "target": "Contract",
+
+            "relationship": "includes"
+
+        },
+        {
+
+            "source": "Relativity One",
+
+            "target": "Experts",
+
+            "relationship": "includes"
+
+        },
+        {
+
+            "source": "Relativity One",
+
+            "target": "Champions",
+
+            "relationship": "includes"
+
+        },
+
+        {
+
+            "source": "Training",
+
+            "target": "Relativity One",
+
+            "relationship": "includes"
+
+        }
+
+    ]
+
+}

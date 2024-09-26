@@ -1,0 +1,81 @@
+{
+
+    "nodes": [
+
+        {
+
+            "id": "Learning",
+
+            "name": "Learning",
+
+            "val": 6
+
+        },
+
+        {
+
+            "id": "Industry Training Development",
+
+            "name": "Industry Training Development",
+
+            "val": 6
+
+        },
+
+        {
+
+            "id": "Leadership Development",
+
+            "name": "Leadership Development",
+
+            "val": 6
+
+        },
+
+        {
+
+            "id": "Technical Development",
+
+            "name": "Technical Development",
+
+            "val": 6
+
+        }
+
+    ],
+
+    "links": [
+
+        {
+
+            "source": "Learning",
+
+            "target": "Industry Training Development",
+
+            "relationship": "includes"
+
+        },
+
+        {
+
+            "source": "Learning",
+
+            "target": "Leadership Development",
+
+            "relationship": "includes"
+
+        },
+
+        {
+
+            "source": "Learning",
+
+            "target": "Technical Development",
+
+            "relationship": "includes"
+
+        }
+
+    ]
+
+}

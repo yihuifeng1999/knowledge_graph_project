@@ -1,0 +1,79 @@
+{
+
+    "nodes": [
+
+        {
+
+            "id": "Experts",
+
+            "name": "Experts",
+
+            "val": 6
+
+        },
+
+        {
+
+            "id": "Employee 1",
+
+            "name": "Employee 1",
+
+            "val": 6
+
+        },
+
+        {
+
+            "id": "Employee 2",
+
+            "name": "Employee 2",
+
+            "val": 6
+
+        },
+
+        {
+
+            "id": "Employee 3",
+
+            "name": "Employee 3",
+
+            "val": 6
+
+        }
+
+    ],
+
+    "links": [
+
+        {
+
+            "source": "Experts",
+
+            "target": "Employee 1",
+
+            "relationship": "includes"
+
+        },
+        {
+
+            "source": "Experts",
+
+            "target": "Employee 2",
+
+            "relationship": "includes"
+
+        },
+        {
+
+            "source": "Experts",
+
+            "target": "Employee 3",
+
+            "relationship": "includes"
+
+        }
+
+    ]
+
+}

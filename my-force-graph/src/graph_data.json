@@ -8,15 +8,18 @@
         {
             "id": "Marketing",
             "name": "Marketing",
+            "group": 8,
             "val": 8
         },
         {
             "id": "Operations",
             "name": "Operations",
+            "group": 1,
             "val": 3
         },
         {
             "id": "Team1",
+            "group": 1,
             "name": "Team1",
             "val": 8
         },
@@ -28,11 +31,13 @@
         {
             "id": "Team3",
             "name": "Team3",
+            "group": 8,
             "val": 7
         },
         {
             "id": "Team4",
             "name": "Team4",
+            "group": 4,
             "val": 9
         },
         {
@@ -43,97 +48,8 @@
         {
             "id": "Team6",
             "name": "Team6",
+            "group": 8,
             "val": 8
-        },
-        {
-            "id": "Employee_1",
-            "name": "Employee_1",
-            "val": 7,
-            "title": "System Administrator"
-        },
-        {
-            "id": "Employee_2",
-            "name": "Employee_2",
-            "val": 9,
-            "title": "Designer"
-        },
-        {
-            "id": "Employee_3",
-            "name": "Employee_3",
-            "val": 8,
-            "title": "Designer"
-        },
-        {
-            "id": "Employee_4",
-            "name": "Employee_4",
-            "val": 6,
-            "title": "Data Analyst"
-        },
-        {
-            "id": "Employee_5",
-            "name": "Employee_5",
-            "val": 3,
-            "title": "Product Manager"
-        },
-        {
-            "id": "Employee_6",
-            "name": "Employee_6",
-            "val": 3,
-            "title": "Software Engineer"
-        },
-        {
-            "id": "Employee_7",
-            "name": "Employee_7",
-            "val": 1,
-            "title": "Data Analyst"
-        },
-        {
-            "id": "Employee_8",
-            "name": "Employee_8",
-            "val": 7,
-            "title": "Data Analyst"
-        },
-        {
-            "id": "Employee_9",
-            "name": "Employee_9",
-            "val": 3,
-            "title": "Product Manager"
-        },
-        {
-            "id": "Employee_10",
-            "name": "Employee_10",
-            "val": 8,
-            "title": "Product Manager"
-        },
-        {
-            "id": "Employee_11",
-            "name": "Employee_11",
-            "val": 5,
-            "title": "Product Manager"
-        },
-        {
-            "id": "Employee_12",
-            "name": "Employee_12",
-            "val": 3,
-            "title": "System Administrator"
-        },
-        {
-            "id": "Employee_13",
-            "name": "Employee_13",
-            "val": 10,
-            "title": "Software Engineer"
-        },
-        {
-            "id": "Employee_14",
-            "name": "Employee_14",
-            "val": 3,
-            "title": "Data Analyst"
-        },
-        {
-            "id": "Employee_15",
-            "name": "Employee_15",
-            "val": 8,
-            "title": "System Administrator"
         },
         {
             "id": "Python",
@@ -143,21 +59,25 @@
         {
             "id": "React",
             "name": "React",
+            "group": 1,
             "val": 8
         },
         {
             "id": "Jira",
             "name": "Jira",
+            "group": 2,
             "val": 7
         },
         {
             "id": "SharePoint",
             "name": "SharePoint",
+            "group": 2,
             "val": 6
         },
         {
             "id": "Office 365",
             "name": "Office 365",
+            "group": 2,
             "val": 6
         },
         {
@@ -166,8 +86,14 @@
             "val": 4
         },
         {
+            "id": "Relativity One",
+            "name": "Relativity One",
+            "val": 4
+        },
+        {
             "id": "FastAPI",
             "name": "FastAPI",
+            "group": 9,
             "val": 6
         },
         {
@@ -183,6 +109,7 @@
         {
             "id": "Snowflake",
             "name": "Snowflake",
+            "group": 1,
             "val": 6
         },
         {
@@ -193,57 +120,74 @@
         {
             "id": "Java",
             "name": "Java",
+            "group": 9,
             "val": 4
         },
         {
             "id": "TypeScript",
             "name": "TypeScript",
+            "group": 4,
             "val": 1
         },
         {
             "id": "HTML",
             "name": "HTML",
+            "group": 1,
+            "val": 4
+        },
+        {
+            "id": "Learning",
+            "name": "Learning",
+            "group": 1,
             "val": 4
         },
         {
             "id": "CSS",
             "name": "CSS",
+            "group": 1,
             "val": 1
         },
         {
             "id": "SQL",
             "name": "SQL",
+            "group": 1,
             "val": 7
         },
         {
             "id": "Node.js",
             "name": "Node.js",
+            "group": 1,
             "val": 9
         },
         {
             "id": "Git",
             "name": "Git",
+            "group": 7,
             "val": 5
         },
         {
             "id": "Figma",
             "name": "Figma",
+            "group": 9,
             "val": 4
         },
         {
             "id": "Slack",
             "name": "Slack",
+            "group": 8,
             "val": 6
         },
         {
             "id": "HR Management System",
             "name": "HR Management System",
+            "group": 1,
             "val": 9,
             "type": "Internal"
         },
         {
             "id": "Employee Portal",
             "name": "Employee Portal",
+            "group": 7,
             "val": 6,
             "type": "Internal"
         },
@@ -257,41 +201,48 @@
             "id": "IT Helpdesk",
             "name": "IT Helpdesk",
             "val": 10,
+            "group": 6,
             "type": "Internal"
         },
         {
             "id": "Customer Portal",
             "name": "Customer Portal",
-            "val": 5,
+            "val": 6,
+            "group": 6,
             "type": "External"
         },
         {
             "id": "E-Commerce Platform",
             "name": "E-Commerce Platform",
-            "val": 4,
+            "val": 5,
+            "group": 4,
             "type": "External"
         },
         {
             "id": "Analytics Dashboard",
             "name": "Analytics Dashboard",
+            "group": 7,
             "val": 9,
             "type": "External"
         },
         {
             "id": "Mobile App",
             "name": "Mobile App",
+            "group": 1,
             "val": 4,
             "type": "External"
         },
         {
             "id": "Public API",
             "name": "Public API",
+            "group": 9,
             "val": 1,
             "type": "External"
         },
         {
             "id": "Website",
             "name": "Website",
+            "group": 1,
             "val": 5,
             "type": "External"
         }
@@ -303,6 +254,16 @@
             "relationship": "includes"
         },
         {
+            "source": "Relativity One",
+            "target": "Teams Messenger",
+            "relationship": "includes"
+        },
+        {
+            "source": "Operations",
+            "target": "SharePoint",
+            "relationship": "includes"
+        },
+        {
             "source": "Engineering",
             "target": "Team2",
             "relationship": "includes"
@@ -323,84 +284,14 @@
             "relationship": "includes"
         },
         {
-            "source": "Marketing",
-            "target": "Team6",
+            "source": "Operations",
+            "target": "Learning",
             "relationship": "includes"
         },
         {
-            "source": "Employee_1",
-            "target": "Team2",
-            "relationship": "member_of"
-        },
-        {
-            "source": "Employee_2",
-            "target": "Team2",
-            "relationship": "member_of"
-        },
-        {
-            "source": "Employee_3",
-            "target": "Team3",
-            "relationship": "member_of"
-        },
-        {
-            "source": "Employee_4",
-            "target": "Team3",
-            "relationship": "member_of"
-        },
-        {
-            "source": "Employee_5",
+            "source": "Marketing",
             "target": "Team6",
-            "relationship": "member_of"
-        },
-        {
-            "source": "Employee_6",
-            "target": "Team2",
-            "relationship": "member_of"
-        },
-        {
-            "source": "Employee_7",
-            "target": "Team6",
-            "relationship": "member_of"
-        },
-        {
-            "source": "Employee_8",
-            "target": "Team4",
-            "relationship": "member_of"
-        },
-        {
-            "source": "Employee_9",
-            "target": "Team3",
-            "relationship": "member_of"
-        },
-        {
-            "source": "Employee_10",
-            "target": "Team1",
-            "relationship": "member_of"
-        },
-        {
-            "source": "Employee_11",
-            "target": "Team6",
-            "relationship": "member_of"
-        },
-        {
-            "source": "Employee_12",
-            "target": "Team5",
-            "relationship": "member_of"
-        },
-        {
-            "source": "Employee_13",
-            "target": "Team4",
-            "relationship": "member_of"
-        },
-        {
-            "source": "Employee_14",
-            "target": "Team5",
-            "relationship": "member_of"
-        },
-        {
-            "source": "Employee_15",
-            "target": "Team4",
-            "relationship": "member_of"
+            "relationship": "includes"
         },
         {
             "source": "Team1",
@@ -408,554 +299,175 @@
             "relationship": "owns"
         },
         {
-            "source": "Team6",
-            "target": "Employee Portal",
-            "relationship": "owns"
+            "source": "Engineering",
+            "target": "Java",
+            "relationship": "built_with"
+        },
+        {
+            "source": "Operations",
+            "target": "Jira",
+            "relationship": "built_with"
+        },
+        {
+            "source": "Employee Portal",
+            "target": "Git",
+            "relationship": "built_with"
+        },
+        {
+            "source": "Internal Chat",
+            "target": "Office 365",
+            "relationship": "built_with"
+        },
+        {
+            "source": "Internal Chat",
+            "target": "SQL",
+            "relationship": "built_with"
+        },
+        {
+            "source": "Engineering",
+            "target": "Kubernetes",
+            "relationship": "built_with"
+        },
+        {
+            "source": "Customer Portal",
+            "target": "SQL",
+            "relationship": "built_with"
+        },
+        {
+            "source": "E-Commerce Platform",
+            "target": "TypeScript",
+            "relationship": "built_with"
+        },
+        {
+            "source": "Analytics Dashboard",
+            "target": "Office 365",
+            "relationship": "built_with"
+        },
+        {
+            "source": "Analytics Dashboard",
+            "target": "Git",
+            "relationship": "built_with"
+        },
+        {
+            "source": "Mobile App",
+            "target": "Teams Messenger",
+            "relationship": "built_with"
+        },
+        {
+            "source": "Mobile App",
+            "target": "React",
+            "relationship": "built_with"
+        },
+        {
+            "source": "Public API",
+            "target": "Java",
+            "relationship": "built_with"
+        },
+        {
+            "source": "Team1",
+            "target": "Docker",
+            "relationship": "manages"
+        },
+        {
+            "source": "Team1",
+            "target": "Snowflake",
+            "relationship": "manages"
+        },
+        {
+            "source": "Team1",
+            "target": "Slack",
+            "relationship": "manages"
         },
         {
             "source": "Team2",
-            "target": "Internal Chat",
-            "relationship": "owns"
+            "target": "Python",
+            "relationship": "manages"
         },
         {
-            "source": "Team6",
+            "source": "SQL",
+            "target": "Engineering",
+            "relationship": "manages"
+        },
+        {
+            "source": "Team2",
+            "target": "SharePoint",
+            "relationship": "manages"
+        },
+        {
+            "source": "Team3",
+            "target": "Slack",
+            "relationship": "manages"
+        },
+        {
+            "source": "Team4",
+            "target": "TypeScript",
+            "relationship": "manages"
+        },
+        {
+            "source": "Engineering",
+            "target": "Operations",
+            "relationship": "manages"
+        },
+        {
+            "source": "Team5",
+            "target": "SQL",
+            "relationship": "manages"
+        },
+        {
+            "source": "React",
+            "target": "CSS",
+            "relationship": "manages"
+        },
+        {
+            "source": "Public API",
+            "target": "FastAPI",
+            "relationship": "manages"
+        },
+        {
+            "source": "Public API",
+            "target": "Figma",
+            "relationship": "manages"
+        },
+        {
+            "source": "Customer Portal",
             "target": "IT Helpdesk",
-            "relationship": "owns"
-        },
-        {
-            "source": "Team4",
-            "target": "Customer Portal",
-            "relationship": "owns"
+            "relationship": "manages"
         },
         {
             "source": "Team5",
-            "target": "E-Commerce Platform",
-            "relationship": "owns"
+            "target": "Airflow",
+            "relationship": "manages"
         },
         {
             "source": "Team6",
-            "target": "Analytics Dashboard",
-            "relationship": "owns"
+            "target": "React",
+            "relationship": "manages"
         },
         {
-            "source": "Team4",
-            "target": "Mobile App",
-            "relationship": "owns"
+            "source": "Website",
+            "target": "HTML",
+            "relationship": "manages"
         },
         {
-            "source": "Team1",
-            "target": "Public API",
-            "relationship": "owns"
-        },
-        {
-            "source": "Team6",
+            "source": "Node.js",
             "target": "Website",
-            "relationship": "owns"
-        },
-        {
-            "source": "Employee_1",
-            "target": "TypeScript",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_1",
-            "target": "FastAPI",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_1",
-            "target": "CSS",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_1",
-            "target": "HTML",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_1",
-            "target": "Java",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_2",
-            "target": "Git",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_2",
-            "target": "TypeScript",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_2",
-            "target": "FastAPI",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_2",
-            "target": "Docker",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_3",
-            "target": "Figma",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_3",
-            "target": "FastAPI",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_4",
-            "target": "Python",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_5",
-            "target": "Git",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_5",
-            "target": "Docker",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_6",
-            "target": "SQL",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_6",
-            "target": "Node.js",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_6",
-            "target": "HTML",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_6",
-            "target": "Airflow",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_7",
-            "target": "Airflow",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_7",
-            "target": "Docker",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_7",
-            "target": "TypeScript",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_7",
-            "target": "Kubernetes",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_7",
-            "target": "SharePoint",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_8",
-            "target": "SharePoint",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_8",
-            "target": "Git",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_8",
-            "target": "Slack",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_9",
-            "target": "Python",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_9",
-            "target": "CSS",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_9",
-            "target": "Airflow",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_10",
-            "target": "HTML",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_10",
-            "target": "Slack",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_10",
-            "target": "Teams Messenger",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_10",
-            "target": "CSS",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_10",
-            "target": "React",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_11",
-            "target": "Java",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_11",
-            "target": "CSS",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_11",
-            "target": "TypeScript",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_11",
-            "target": "Python",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_11",
-            "target": "Docker",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_12",
-            "target": "Java",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_12",
-            "target": "CSS",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_12",
-            "target": "TypeScript",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_12",
-            "target": "Jira",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_12",
-            "target": "Office 365",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_13",
-            "target": "Python",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_13",
-            "target": "Teams Messenger",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_13",
-            "target": "CSS",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_14",
-            "target": "FastAPI",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_15",
-            "target": "Snowflake",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_15",
-            "target": "Teams Messenger",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_15",
-            "target": "Docker",
-            "relationship": "uses"
-        },
-        {
-            "source": "Employee_15",
-            "target": "Airflow",
-            "relationship": "uses"
-        },
-        {
-            "source": "HR Management System",
-            "target": "SQL",
-            "relationship": "built_with"
-        },
-        {
-            "source": "HR Management System",
-            "target": "React",
-            "relationship": "built_with"
-        },
-        {
-            "source": "HR Management System",
-            "target": "Java",
-            "relationship": "built_with"
-        },
-        {
-            "source": "HR Management System",
-            "target": "Jira",
-            "relationship": "built_with"
-        },
-        {
-            "source": "Employee Portal",
-            "target": "Git",
-            "relationship": "built_with"
-        },
-        {
-            "source": "Employee Portal",
-            "target": "Python",
-            "relationship": "built_with"
-        },
-        {
-            "source": "Internal Chat",
-            "target": "Office 365",
-            "relationship": "built_with"
-        },
-        {
-            "source": "Internal Chat",
-            "target": "SQL",
-            "relationship": "built_with"
-        },
-        {
-            "source": "IT Helpdesk",
-            "target": "Java",
-            "relationship": "built_with"
-        },
-        {
-            "source": "IT Helpdesk",
-            "target": "Kubernetes",
-            "relationship": "built_with"
-        },
-        {
-            "source": "Customer Portal",
-            "target": "SQL",
-            "relationship": "built_with"
-        },
-        {
-            "source": "Customer Portal",
-            "target": "Kubernetes",
-            "relationship": "built_with"
-        },
-        {
-            "source": "Customer Portal",
-            "target": "Python",
-            "relationship": "built_with"
-        },
-        {
-            "source": "E-Commerce Platform",
-            "target": "TypeScript",
-            "relationship": "built_with"
-        },
-        {
-            "source": "E-Commerce Platform",
-            "target": "Slack",
-            "relationship": "built_with"
-        },
-        {
-            "source": "Analytics Dashboard",
-            "target": "Office 365",
-            "relationship": "built_with"
-        },
-        {
-            "source": "Analytics Dashboard",
-            "target": "Figma",
-            "relationship": "built_with"
-        },
-        {
-            "source": "Analytics Dashboard",
-            "target": "React",
-            "relationship": "built_with"
-        },
-        {
-            "source": "Analytics Dashboard",
-            "target": "Git",
-            "relationship": "built_with"
-        },
-        {
-            "source": "Mobile App",
-            "target": "Teams Messenger",
-            "relationship": "built_with"
-        },
-        {
-            "source": "Mobile App",
-            "target": "React",
-            "relationship": "built_with"
-        },
-        {
-            "source": "Public API",
-            "target": "Python",
-            "relationship": "built_with"
-        },
-        {
-            "source": "Public API",
-            "target": "Docker",
-            "relationship": "built_with"
-        },
-        {
-            "source": "Public API",
-            "target": "Snowflake",
-            "relationship": "built_with"
-        },
-        {
-            "source": "Public API",
-            "target": "Java",
-            "relationship": "built_with"
+            "relationship": "manages"
         },
         {
             "source": "Website",
-            "target": "HTML",
-            "relationship": "built_with"
-        },
-        {
-            "source": "Website",
-            "target": "Kubernetes",
-            "relationship": "built_with"
-        },
-        {
-            "source": "Team1",
-            "target": "Docker",
-            "relationship": "manages"
-        },
-        {
-            "source": "Team1",
-            "target": "Snowflake",
-            "relationship": "manages"
-        },
-        {
-            "source": "Team1",
-            "target": "Slack",
-            "relationship": "manages"
-        },
-        {
-            "source": "Team2",
-            "target": "FastAPI",
-            "relationship": "manages"
-        },
-        {
-            "source": "Team2",
-            "target": "Python",
-            "relationship": "manages"
-        },
-        {
-            "source": "Team2",
-            "target": "SharePoint",
-            "relationship": "manages"
-        },
-        {
-            "source": "Team3",
-            "target": "Slack",
-            "relationship": "manages"
-        },
-        {
-            "source": "Team3",
-            "target": "Kubernetes",
-            "relationship": "manages"
-        },
-        {
-            "source": "Team3",
-            "target": "Docker",
-            "relationship": "manages"
-        },
-        {
-            "source": "Team4",
-            "target": "TypeScript",
-            "relationship": "manages"
-        },
-        {
-            "source": "Team5",
-            "target": "SQL",
-            "relationship": "manages"
-        },
-        {
-            "source": "Team6",
             "target": "React",
             "relationship": "manages"
         },
         {
-            "source": "Team6",
-            "target": "Office 365",
+            "source": "Office 365",
+            "target": "Operations",
             "relationship": "manages"
-        },
-        {
-            "source": "Team6",
-            "target": "SharePoint",
-            "relationship": "manages"
-        },
-        {
-            "source": "Team2",
-            "target": "Team1",
-            "relationship": "collaborates_with"
-        },
-        {
-            "source": "Team3",
-            "target": "Team1",
-            "relationship": "collaborates_with"
-        },
-        {
-            "source": "Team4",
-            "target": "Team5",
-            "relationship": "collaborates_with"
-        },
-        {
-            "source": "Team4",
-            "target": "Team2",
-            "relationship": "collaborates_with"
-        },
-        {
-            "source": "Team5",
-            "target": "Team4",
-            "relationship": "collaborates_with"
-        },
-        {
-            "source": "Team5",
-            "target": "Team6",
-            "relationship": "collaborates_with"
-        },
-        {
-            "source": "Team5",
-            "target": "Team3",
-            "relationship": "collaborates_with"
         },
         {
             "source": "Team6",
             "target": "Team1",
             "relationship": "collaborates_with"
         }
+        
     ]
 }

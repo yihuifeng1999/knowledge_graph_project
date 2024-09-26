@@ -1,0 +1,61 @@
+{
+
+    "nodes": [
+
+        {
+
+            "id": "A Cloud Guru",
+
+            "name": "A Cloud Guru",
+
+            "val": 6
+
+        },
+
+        {
+
+            "id": "URL: https://learn.acloud.guru/home",
+
+            "name": "URL: https://learn.acloud.guru/home",
+
+            "val": 6
+
+        },
+
+        {
+
+            "id": "Support: TechU@finra.org",
+
+            "name": "Support: TechU@finra.org",
+
+            "val": 6
+
+        }
+
+    ],
+
+    "links": [
+
+        {
+
+            "source": "A Cloud Guru",
+
+            "target": "URL: https://learn.acloud.guru/home",
+
+            "relationship": "includes"
+
+        },
+
+        {
+
+            "source": "A Cloud Guru",
+
+            "target": "Support: TechU@finra.org",
+
+            "relationship": "includes"
+
+        }
+
+    ]
+
+}
