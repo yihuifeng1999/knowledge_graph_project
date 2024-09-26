@@ -14,40 +14,40 @@
         {
             "id": "Operations",
             "name": "Operations",
-            "group": 1,
+            "group": 2,
             "val": 3
         },
         {
-            "id": "Team1",
+            "id": "Wiki",
             "group": 1,
-            "name": "Team1",
+            "name": "Wiki",
             "val": 8
         },
         {
-            "id": "Team2",
-            "name": "Team2",
+            "id": "Vendors",
+            "name": "Vendors",
             "val": 9
         },
         {
-            "id": "Team3",
-            "name": "Team3",
+            "id": "Entitlements",
+            "name": "Entitlements",
             "group": 8,
             "val": 7
         },
         {
-            "id": "Team4",
-            "name": "Team4",
+            "id": "Subject Matter Summary",
+            "name": "Subject Matter Summary",
             "group": 4,
             "val": 9
         },
         {
-            "id": "Team5",
-            "name": "Team5",
+            "id": "SMEs",
+            "name": "SMEs",
             "val": 8
         },
         {
-            "id": "Team6",
-            "name": "Team6",
+            "id": "Firm Profiles",
+            "name": "Firm Profiles",
             "group": 8,
             "val": 8
         },
@@ -81,13 +81,15 @@
             "val": 6
         },
         {
-            "id": "Teams Messenger",
-            "name": "Teams Messenger",
+            "id": "Outlook",
+            "name": "Outlook",
+            "group": 11,
             "val": 4
         },
         {
             "id": "Relativity One",
             "name": "Relativity One",
+            "group": 11,
             "val": 4
         },
         {
@@ -250,12 +252,12 @@
     "links": [
         {
             "source": "Operations",
-            "target": "Team1",
+            "target": "Wiki",
             "relationship": "includes"
         },
         {
             "source": "Relativity One",
-            "target": "Teams Messenger",
+            "target": "Outlook",
             "relationship": "includes"
         },
         {
@@ -265,22 +267,22 @@
         },
         {
             "source": "Engineering",
-            "target": "Team2",
+            "target": "Vendors",
             "relationship": "includes"
         },
         {
             "source": "Marketing",
-            "target": "Team3",
+            "target": "Entitlements",
             "relationship": "includes"
         },
         {
             "source": "Engineering",
-            "target": "Team4",
+            "target": "Subject Matter Summary",
             "relationship": "includes"
         },
         {
             "source": "Operations",
-            "target": "Team5",
+            "target": "SMEs",
             "relationship": "includes"
         },
         {
@@ -290,11 +292,11 @@
         },
         {
             "source": "Marketing",
-            "target": "Team6",
+            "target": "Firm Profiles",
             "relationship": "includes"
         },
         {
-            "source": "Team1",
+            "source": "Wiki",
             "target": "HR Management System",
             "relationship": "owns"
         },
@@ -350,7 +352,17 @@
         },
         {
             "source": "Mobile App",
-            "target": "Teams Messenger",
+            "target": "Outlook",
+            "relationship": "built_with"
+        },
+        {
+            "source": "Learning",
+            "target": "React",
+            "relationship": "built_with"
+        },
+        {
+            "source": "Learning",
+            "target": "SQL",
             "relationship": "built_with"
         },
         {
@@ -364,22 +376,22 @@
             "relationship": "built_with"
         },
         {
-            "source": "Team1",
+            "source": "Wiki",
             "target": "Docker",
             "relationship": "manages"
         },
         {
-            "source": "Team1",
+            "source": "Wiki",
             "target": "Snowflake",
             "relationship": "manages"
         },
         {
-            "source": "Team1",
+            "source": "Wiki",
             "target": "Slack",
             "relationship": "manages"
         },
         {
-            "source": "Team2",
+            "source": "Vendors",
             "target": "Python",
             "relationship": "manages"
         },
@@ -389,17 +401,17 @@
             "relationship": "manages"
         },
         {
-            "source": "Team2",
+            "source": "Vendors",
             "target": "SharePoint",
             "relationship": "manages"
         },
         {
-            "source": "Team3",
+            "source": "Entitlements",
             "target": "Slack",
             "relationship": "manages"
         },
         {
-            "source": "Team4",
+            "source": "Subject Matter Summary",
             "target": "TypeScript",
             "relationship": "manages"
         },
@@ -409,7 +421,7 @@
             "relationship": "manages"
         },
         {
-            "source": "Team5",
+            "source": "SMEs",
             "target": "SQL",
             "relationship": "manages"
         },
@@ -434,12 +446,12 @@
             "relationship": "manages"
         },
         {
-            "source": "Team5",
+            "source": "SMEs",
             "target": "Airflow",
             "relationship": "manages"
         },
         {
-            "source": "Team6",
+            "source": "Firm Profiles",
             "target": "React",
             "relationship": "manages"
         },
@@ -464,8 +476,8 @@
             "relationship": "manages"
         },
         {
-            "source": "Team6",
-            "target": "Team1",
+            "source": "Firm Profiles",
+            "target": "Wiki",
             "relationship": "collaborates_with"
         }
         

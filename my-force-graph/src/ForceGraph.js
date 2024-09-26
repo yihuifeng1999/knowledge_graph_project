@@ -187,7 +187,7 @@ const ForceGraph = () => {
             );
             // Delay the calculation to allow camera movement
             setTimeout(() => {
-                const coords = { x: window.innerWidth * 2 / 3 + 100, y: window.innerHeight * 2 / 5, z: 100 };
+                const coords = { x: window.innerWidth * 4 / 5 + 100, y: window.innerHeight * 3 / 10, z: 100 };
                 setPanelPosition(coords);
             }, 1500); // Match the camera transition duration
         }
