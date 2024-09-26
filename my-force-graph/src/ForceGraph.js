@@ -134,15 +134,15 @@ const ForceGraph = () => {
     const hadnleNodeOnClick = (node) => {
         // Save the current state to history  
         setGraphHistory((prevHistory) => [...prevHistory, graphData]);
-        if(selectedNode == node){
+        if (selectedNode == node) {
             const newGraphData = generateNewGraphData(node);
             setGraphData(newGraphData);
-        }else{
+        } else {
             // Set the selected node
             setSelectedNode(node);
         }
-        
-    
+
+
         // Optionally, center the camera on the clicked node
         if (fgRef.current) {
             const distance = 200;
@@ -160,7 +160,7 @@ const ForceGraph = () => {
             );
             // Delay the calculation to allow camera movement
             setTimeout(() => {
-                const coords = {x:window.innerWidth*2/3 + 100, y:window.innerHeight/4, z:100};
+                const coords = { x: window.innerWidth * 2 / 3 + 100, y: window.innerHeight * 2 / 5, z: 100 };
                 setPanelPosition(coords);
             }, 1000); // Match the camera transition duration
         }
@@ -168,28 +168,27 @@ const ForceGraph = () => {
 
 
     return (
-        <div className="relative h-screen">
-            <div className="absolute top-10 left-10 z-10">
-                <div className="flex-initial items-center space-x-2">
-                    <input
-                        className="px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        type="text"
-                        placeholder="Search node..."
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                        onKeyDown={(e) => {
-                            if (e.key === 'Enter') {
-                                handleSearch();
-                            }
-                        }}
-                    />
-                </div>
-                <button onClick={handleSearch}
-                    className="flex-initial bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 focus:outline-none">Search</button>
-
-                <button className=" flex-initial bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none" onClick={handleBack}>
+        <div className="relative">
+            <div className="absolute top-1 z-10 justify-start space-x-1">
+                <button className="relative bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none" onClick={handleBack}>
                     Back
                 </button>
+
+                <input
+                    className="px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    type="text"
+                    placeholder="Search APP..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                            handleSearch();
+                        }
+                    }}
+                />
+                <button onClick={handleSearch}
+                    className="relative bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 focus:outline-none">Search</button>
+
             </div>
             {selectedNode && (
                 <div
@@ -197,7 +196,7 @@ const ForceGraph = () => {
                     style={{
                         top: panelPosition.y,
                         left: panelPosition.x,
-                        transform: 'translate(-50%, -50%)',
+                        transform: 'translate(-100%, -100%)',
                     }}
                 >
                     <h3 className="text-lg font-bold mb-2">Node Details</h3>
