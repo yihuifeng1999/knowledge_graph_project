@@ -123,7 +123,7 @@ const ForceGraph = () => {
                         z: (matchedNode.z || 0) * distRatio,
                     },
                     matchedNode, // Look at the clicked node
-                    3000  // Transition duration in ms
+                    1000  // Transition duration in ms
                 );
             }
         } else {
@@ -183,13 +183,13 @@ const ForceGraph = () => {
                     z: (node.z || 0) * distRatio,
                 },
                 node, // Look at the clicked node
-                2000  // Transition duration in ms
+                1000  // Transition duration in ms
             );
             // Delay the calculation to allow camera movement
             setTimeout(() => {
                 const coords = { x: window.innerWidth * 4 / 5 + 100, y: window.innerHeight * 3 / 10, z: 100 };
                 setPanelPosition(coords);
-            }, 1500); // Match the camera transition duration
+            }, 800); // Match the camera transition duration
         }
     }
 
@@ -228,6 +228,9 @@ const ForceGraph = () => {
                 >
                     <h3 className="text-lg font-bold mb-2">Node Details</h3>
                     <p><strong>ID:</strong> {selectedNode.id}</p>
+                    <p><strong>Stakeholders:</strong> TBA </p>
+                    <p><strong>Notes:</strong> TBA </p>
+                    <p><strong>URL:</strong> TBA </p>
                     {/* <p><strong>Group:</strong> {selectedNode.group}</p> */}
                     {/* Add more node properties as needed */}
                     <button
